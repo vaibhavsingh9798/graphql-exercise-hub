@@ -1,7 +1,7 @@
 
-exports.typeDefs = `#graphql
+const typeDefs = `#graphql
        
-type Game{
+type Game {
  id : ID!
  title : String!
  plateform : [String!]!
@@ -24,7 +24,8 @@ type Query{
     games : [Game]
     authors : [Author]
     reviews : [Review]
-    hello : String 
 }
 
 `
+
+module.exports = typeDefs;
