@@ -5,18 +5,22 @@ type Game {
  id : ID!
  title : String!
  plateform : [String!]!
+ reviews: [Review!]
 }
 
 type Author{
     id : ID!
     name : String!
     verified : Boolean!
+    reviews: [Review!]
 }
 
 type Review{
     id : ID!
     rating : Int!
     content : String!
+    game : Game!
+    author : Author!
 }
 
 type Query{
