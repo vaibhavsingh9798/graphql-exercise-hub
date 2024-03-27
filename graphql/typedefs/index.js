@@ -35,6 +35,16 @@ type Query{
     review(id : ID!) : Review
 }
 
+input AddGameInput{
+    title : String!
+    plateform : [String!]!
+}
+
+type Mutation{
+    addGame(game : AddGameInput!) : Game
+    deleteGame(id: ID !) : [Game]
+}
+
 `
 
 module.exports = typeDefs;
